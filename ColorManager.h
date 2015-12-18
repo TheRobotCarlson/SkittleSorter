@@ -2,12 +2,12 @@
 class ColorManager{
   
   public:
-    ColorManager(int binNum,float* dev,float tol);
+    ColorManager(int binNum,float dev[3],float tol);
     float** bins;
     int placeBin(int r,int g, int b);
   private:
     float _tolerance;
-    float* _dev;
+    float _dev[3];
 };
     
     

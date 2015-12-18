@@ -2,7 +2,7 @@
 
 using namespace std;
 
-ColorManager::ColorManager(int binNum,float* dev,float tol){
+ColorManager::ColorManager(int binNum,float* deriv,float tol){
   _tolerance=tol;
   bins = new float*[binNum];
   for(int i=0; i<binNum;i++){
