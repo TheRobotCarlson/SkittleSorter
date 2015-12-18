@@ -40,7 +40,7 @@ void setup()
 
   digitalWrite(s0, HIGH);  
   digitalWrite(s1, HIGH);
-myservo.write(91); 
+ 
 }  
     
 void loop() 
@@ -57,19 +57,25 @@ void loop()
   if (red < blue && red < green && red < 20)
   {  
    Serial.println(" - (Red Color)");
-   //myservo.write(1);   
+   myservo.write(0);
+    delay(100);
+ myservo.write(91);   
   }  
 
   else if (blue < red && blue < green)   
   {  
    Serial.println(" - (Blue Color)"); 
-  //myservo.write(3); 
+  myservo.write(0);
+    delay(300);
+ myservo.write(91); 
   }  
 
   else if (green < red && green < blue)  
   {  
    Serial.println(" - (Green Color)"); 
-  //myservo.write(2); 
+  myservo.write(0);
+    delay(500);
+ myservo.write(91); 
   }  
   else{
   Serial.println();  
